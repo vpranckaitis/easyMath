@@ -1,0 +1,55 @@
+<!ENTITY easymathGroup.common  "Common">
+<!ENTITY easymathGroup.comparison  "Comparison">
+<!ENTITY easymathGroup.fractions  "Fractions">
+<!ENTITY easymathGroup.superscript  "Superscript">
+<!ENTITY easymathGroup.other "Other">
+<!ENTITY easymathGroup.greek  "Greek letters">
+
+<!ENTITY easymathSign.plus  "Plus Sign">
+<!ENTITY easymathSign.minus  "Minus Sign">
+<!ENTITY easymathSign.plus-minus  "Plus-Minus Sign">
+<!ENTITY easymathSign.multiplication  "Multiplication Sign">
+<!ENTITY easymathSign.bullet  "Bullet Operator">
+<!ENTITY easymathSign.division  "Division Sign">
+<!ENTITY easymathSign.slash  "Division Slash">
+
+<!ENTITY easymathSign.equals  "Equals Sign">
+<!ENTITY easymathSign.not-equal  "Not Equal To">
+<!ENTITY easymathSign.almost-equal  "Almost Equal To">
+<!ENTITY easymathSign.identical  "Identical To">
+<!ENTITY easymathSign.less  "Less-Than Sign">
+<!ENTITY easymathSign.greater  "Greater-Than Sign">
+<!ENTITY easymathSign.less-equal  "Less-Than Or Equal To">
+<!ENTITY easymathSign.greater-equal  "Greater-Than Or Equal To">
+
+<!ENTITY easymathSign.one-half  "Vulgar Fraction One Half">
+<!ENTITY easymathSign.one-third  "Vulgar Fraction One Third">
+<!ENTITY easymathSign.two-thirds  "Vulgar Fraction Two Thirds">
+<!ENTITY easymathSign.one-quarter  "Vulgar Fraction One Quarter">
+<!ENTITY easymathSign.three-quarters  "Vulgar Fraction Three Quarters">
+<!ENTITY easymathSign.one-eighth  "Vulgar Fraction One Eighth">
+<!ENTITY easymathSign.three-eighths  "Vulgar Fraction Three Eighths">
+<!ENTITY easymathSign.five-eighths  "Vulgar Fraction Five Eighths">
+<!ENTITY easymathSign.seven-eighths  "Vulgar Fraction Seven Eighths">
+
+<!ENTITY easymathSign.superscript-zero  "Superscript Zero">
+<!ENTITY easymathSign.superscript-one  "Superscript One">
+<!ENTITY easymathSign.superscript-two  "Superscript Two">
+<!ENTITY easymathSign.superscript-three  "Superscript Three">
+<!ENTITY easymathSign.superscript-four  "Superscript Four">
+<!ENTITY easymathSign.superscript-five  "Superscript Five">
+<!ENTITY easymathSign.superscript-six  "Superscript Six">
+<!ENTITY easymathSign.superscript-seven  "Superscript Seven">
+<!ENTITY easymathSign.superscript-eight  "Superscript Eight">
+<!ENTITY easymathSign.superscript-nine  "Superscript Nine">
+<!ENTITY easymathSign.superscript-n  "Superscript Latin Small Letter N">
+
+<!ENTITY easymathSign.product "N-Ary product">
+<!ENTITY easymathSign.summation "N-Ary Summation">
+<!ENTITY easymathSign.partial-differential "Partial Differential">
+<!ENTITY easymathSign.integral "Integral">
+<!ENTITY easymathSign.sqrt "Square Root">
+<!ENTITY easymathSign.increment "Increment">
+<!ENTITY easymathSign.infinity "Infinity">
+
+<!ENTITY easymathSign. "">

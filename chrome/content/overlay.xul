@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://easymath/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://easymath/locale/overlay.dtd">
+<overlay id="easymath-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script src="overlay.js"/>
+
+	<menupopup id="viewSidebarMenu">
+		<menuitem id="easymath-menu-item" label="&easymath.label;" 
+				  key="sidebarShortcut"
+				  observes="viewSidebar" />
+	</menupopup>
+	
+	<keyset>
+		<key id="sidebarShortcut" command="viewSidebar" key="&easymath.shortcut-key;" modifiers="&easymath.shortcut-modifiers;" />
+	</keyset>
+	
+	<broadcasterset id="mainBroadcasterSet">
+		<broadcaster id="viewSidebar"
+					 sidebarurl="chrome://easymath/content/sidebar.xul"
+					 autoCheck="false"
+					 type="checkbox"
+					 group="sidebar"
+					 sidebartitle="&easymathSidebar.label;"
+					 oncommand="toggleSidebar('viewSidebar')" />
+	</broadcasterset>
+
+</overlay>

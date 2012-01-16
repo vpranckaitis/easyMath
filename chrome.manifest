@@ -1,0 +1,7 @@
+content   easymath                 chrome/content/
+skin      easymath   classic/1.0   chrome/skin/
+locale    easymath   en-US         chrome/locale/en-US/
+
+
+
+overlay   chrome://browser/content/browser.xul   chrome://easymath/content/overlay.xul
