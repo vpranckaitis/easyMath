@@ -1,0 +1,21 @@
+#display checkbox
+{
+	width: 100px;
+}
+
+#greek richlistbox
+{
+	height: 100px;
+	width: 200px;
+}
+
+#greek richlistitem>label
+{
+	margin-top: 5px;
+	width: 60px;
+}
+
+#greek richlistbox checkbox
+{
+	width: 40px;
+}

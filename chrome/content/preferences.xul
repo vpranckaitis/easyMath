@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://browser/skin/browser.css" type="text/css" ?>
+<?xml-stylesheet href="chrome://browser/skin/preferences/preferences.css" type="text/css" ?>
+<?xml-stylesheet href="chrome://easymath/skin/preferences.css" type="text/css" ?>
+
+<!DOCTYPE prefwindow [
+	<!ENTITY % sidebarDTD SYSTEM "chrome://easymath/locale/sidebar.dtd">
+	%sidebarDTD;
+	<!ENTITY % preferencesDTD SYSTEM "chrome://easymath/locale/preferences.dtd">
+	%preferencesDTD;
+	<!ENTITY % greekDTD SYSTEM "chrome://easymath/locale/greek.dtd">
+	%greekDTD;
+]>
+
+<prefwindow title="&easymathPrefs.title;" onload="preferences.onLoad()"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<prefpane id="display" label="&easymathPrefs.paneDisplay;" flex="1">
+		<preferences>
+		  <preference id="hideCommon" name="extensions.easymath.hideCommon" type="bool"/>
+		  <preference id="hideComparison" name="extensions.easymath.hideComparison" type="bool"/>
+		  <preference id="hideFractions" name="extensions.easymath.hideFractions" type="bool"/>
+		  <preference id="hideSuperscript" name="extensions.easymath.hideSuperscript" type="bool"/>
+		  <preference id="hideOther" name="extensions.easymath.hideOther" type="bool"/>
+		  <preference id="hideGreek" name="extensions.easymath.hideGreek" type="bool"/>
+		</preferences>
+		 
+		<groupbox>
+			<caption label="&easymathPrefs.hide;" />
+			<hbox>
+				<checkbox preference="hideCommon" label="&easymathGroup.common;"/>
+				<checkbox preference="hideComparison" label="&easymathGroup.comparison;"/>
+				<checkbox preference="hideFractions" label="&easymathGroup.fractions;"/>
+			</hbox>
+			<hbox>
+				<checkbox preference="hideSuperscript" label="&easymathGroup.superscript;"/>
+				<checkbox preference="hideOther" label="&easymathGroup.other;"/>
+				<checkbox preference="hideGreek" label="&easymathGroup.greek;"/>
+			</hbox>
+		</groupbox>
+	</prefpane>
+	<prefpane id="greek" label="&easymathPrefs.paneGreek;" flex="1">
+		<preferences>
+			<preference id="greekPref" name="extensions.easymath.greek" type="string" />
+		</preferences>
+		<richlistbox id="greekLetterBox" preference="greekPref" onsyncfrompreference="return false" onsynctopreference="return preferences.setGreek(this)">
+			<richlistitem>
+				<label value="&easymathGreek.alpha;" />
+				<checkbox label="Α" />
+				<checkbox label="α" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.beta;" />
+				<checkbox label="Β" />
+				<checkbox label="β" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.gamma;" />
+				<checkbox label="Γ" />
+				<checkbox label="γ" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.delta;" />
+				<checkbox label="Δ" />
+				<checkbox label="δ" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.epsilon;" />
+				<checkbox label="Ε" />
+				<checkbox label="ε" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.zeta;" />
+				<checkbox label="Ζ" />
+				<checkbox label="ζ" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.eta;" />
+				<checkbox label="Η" />
+				<checkbox label="η" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.theta;" />
+				<checkbox label="Θ" />
+				<checkbox label="θ" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.iota;" />
+				<checkbox label="Ι" />
+				<checkbox label="ι" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.kappa;" />
+				<checkbox label="Κ" />
+				<checkbox label="κ" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.lambda;" />
+				<checkbox label="Λ" />
+				<checkbox label="λ" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.mu;" />
+				<checkbox label="Μ" />
+				<checkbox label="μ" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.nu;" />
+				<checkbox label="Ν" />
+				<checkbox label="ν" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.xi;" />
+				<checkbox label="Ξ" />
+				<checkbox label="ξ" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.omicron;" />
+				<checkbox label="Ο" />
+				<checkbox label="ο" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.pi;" />
+				<checkbox label="Π" />
+				<checkbox label="π" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.rho;" />
+				<checkbox label="Ρ" />
+				<checkbox label="ρ" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.sigma;" />
+				<checkbox label="Σ" />
+				<checkbox label="σ" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.tau;" />
+				<checkbox label="Τ" />
+				<checkbox label="τ" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.upsilon;" />
+				<checkbox label="Υ" />
+				<checkbox label="υ" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.phi;" />
+				<checkbox label="Φ" />
+				<checkbox label="φ" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.chi;" />
+				<checkbox label="Χ" />
+				<checkbox label="χ" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.psi;" />
+				<checkbox label="Ψ" />
+				<checkbox label="ψ" />
+			</richlistitem>
+			<richlistitem>
+				<label value="&easymathGreek.omega;" />
+				<checkbox label="Ω" />
+				<checkbox label="ω" />
+			</richlistitem>
+		</richlistbox>
+	</prefpane>
+	<script src="chrome://easymath/content/preferences.js" type="text/javascript" />
+</prefwindow>

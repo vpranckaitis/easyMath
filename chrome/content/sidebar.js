@@ -3,21 +3,20 @@ var sidebar = {
 	onLoad: function()
 	{
 		window.top.document.getElementById("sidebar-splitter").hidden = true;
-		beforeWidth = window.top.document.getElementById("sidebar-box").width;
-		window.top.document.getElementById("sidebar-box").width = document.getElementById("easymath-sidebar").childNodes[2]["clientWidth"];
+		this.loadSettings();
+		this.beforeWidth = window.top.document.getElementById("sidebar-box").width;
+		window.top.document.getElementById("sidebar-box").width = document.getElementById("container").clientWidth;
 	},
 	
 	onUnload: function()
 	{
-		//alert(beforeWidth);
-		window.top.document.getElementById("sidebar-box").width = beforeWidth;
+		window.top.document.getElementById("sidebar-box").width = this.beforeWidth;
 		window.top.document.getElementById("sidebar-splitter").hidden = false;
 	},
 	
 	addChar: function(c, root)
 	{
 		var element = content.document.activeElement;
-		//alert(element.tagName + " " + element.type);
 		if(((element.tagName == "INPUT") && (element.type == "text")) || (element.tagName == "TEXTAREA"))
 		{
 			var text = element.value;
@@ -26,9 +25,41 @@ var sidebar = {
 			element.focus();
 			element.selectionStart = element.selectionEnd = start + c.length;
 		}
-		/*
-		element.value += c;
-		element.focus();
-		*/
+	},
+	
+	loadSettings: function()
+	{ 
+		var strings = new Array("Common", "Comparison", "Fractions", "Superscript", "Other", "Greek");
+		for(i = 0; i < strings.length; i++)
+			document.getElementById("group" + strings[i]).hidden = Application.prefs.get("extensions.easymath.hide" + strings[i]).value;
+		
+		if(!document.getElementById("groupGreek").hidden)
+		{	
+			var greek = Application.prefs.get("extensions.easymath.greek").value;
+			var letters = "ΑαΒβΓγΔδΕεΖζΗηΘθΙιΚκΛλΜμΝνΞξΟοΠπΡρΣσΤτΥυΦφΧχΨψΩω";
+			var lettersNames = new Array("alpha", "beta", "gamma", "delta", "epsilon", "zeta", "eta", "theta", "iota",
+										 "kappa" , "lambda", "mu", "nu", "xi", "omicron", "pi", "rho", "sigma", "tau", 
+										 "upsilon", "phi", "chi", "psi", "omega");
+			setTimeout(function(){
+			var hbox = document.createElement("hbox");
+			document.getElementById("groupGreek").appendChild(hbox);
+			for(i = 0; i < greek.length; i++)
+			{
+				if(greek[i] == "1")
+				{
+					var button = document.createElement("button");
+					hbox.appendChild(button);
+					button.label = letters[i];
+					button.tooltiptext = "&easymathGreek." + lettersNames[i] + ";";
+					button.oncommand = "sidebar.addChar(this.label, false)";
+					if(hbox.childNodes.length == 7)
+					{
+						hbox = document.createElement("hbox");
+						document.getElementById("groupGreek").appendChild(hbox);
+					}
+				}
+			}
+			}, 0);
+		}
 	}
 };

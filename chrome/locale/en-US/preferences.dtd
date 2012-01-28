@@ -1,1 +1,4 @@
-<!ENTITY easymathPref.check_label  "Ckeckbox label">
+<!ENTITY easymathPrefs.title  "easyMath Preferences">
+<!ENTITY easymathPrefs.hide  "Hide groups">
+<!ENTITY easymathPrefs.paneDisplay  "Display">
+<!ENTITY easymathPrefs.paneGreek  "Greek">
