@@ -12,7 +12,9 @@
 
 <page id="easymath-sidebar" onload="sidebar.onLoad()" onunload="sidebar.onUnload()" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 	<script src="sidebar.js" type="text/javascript"/>
-	
+	<stringbundleset>
+		<stringbundle id="stringbundle" src="chrome://easymath/locale/greek.properties" />
+	</stringbundleset>
 	<vbox id="container">
 		<groupbox id="groupCommon" hidden="true">
 			<caption label="&easymathGroup.common;"/>
