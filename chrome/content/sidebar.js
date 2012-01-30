@@ -40,18 +40,19 @@ var sidebar = {
 			var lettersNames = new Array("alpha", "beta", "gamma", "delta", "epsilon", "zeta", "eta", "theta", "iota",
 										 "kappa" , "lambda", "mu", "nu", "xi", "omicron", "pi", "rho", "sigma", "tau", 
 										 "upsilon", "phi", "chi", "psi", "omega");
-			setTimeout(function(){
+			var stringbundle = document.getElementById("stringbundle");
 			var hbox = document.createElement("hbox");
 			document.getElementById("groupGreek").appendChild(hbox);
+			
 			for(i = 0; i < greek.length; i++)
 			{
 				if(greek[i] == "1")
 				{
 					var button = document.createElement("button");
 					hbox.appendChild(button);
-					button.label = letters[i];
-					button.tooltiptext = "&easymathGreek." + lettersNames[i] + ";";
-					button.oncommand = "sidebar.addChar(this.label, false)";
+					button.setAttribute("label", letters[i]);
+					button.setAttribute("tooltiptext", stringbundle.getString(lettersNames[(i - i%2)/2]));
+					button.setAttribute("oncommand", "sidebar.addChar(this.label, false)");
 					if(hbox.childNodes.length == 7)
 					{
 						hbox = document.createElement("hbox");
@@ -59,7 +60,6 @@ var sidebar = {
 					}
 				}
 			}
-			}, 0);
 		}
 	}
 };
