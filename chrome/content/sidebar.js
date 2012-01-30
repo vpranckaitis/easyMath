@@ -52,7 +52,7 @@ var sidebar = {
 					hbox.appendChild(button);
 					button.setAttribute("label", letters[i]);
 					button.setAttribute("tooltiptext", stringbundle.getString(lettersNames[(i - i%2)/2]));
-					button.setAttribute("oncommand", "sidebar.addChar(this.label, false)");
+					button.addEventListener("command", function(event){sidebar.addChar(event.target.label, false)});
 					if(hbox.childNodes.length == 7)
 					{
 						hbox = document.createElement("hbox");
