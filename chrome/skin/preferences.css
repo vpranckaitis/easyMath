@@ -19,3 +19,16 @@
 {
 	width: 40px;
 }
+
+radio[pane]
+{
+	list-style-image: url("chrome://easymath/skin/prefpane.png"); 
+}
+radio[pane=display]
+{
+	-moz-image-region: rect(0, 32px, 32px, 0);
+}
+radio[pane=greek]
+{
+	-moz-image-region: rect(0, 64px, 32px, 32px);
+}
