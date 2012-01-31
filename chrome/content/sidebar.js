@@ -5,7 +5,7 @@ var sidebar = {
 		window.top.document.getElementById("sidebar-splitter").hidden = true;
 		this.loadSettings();
 		this.beforeWidth = window.top.document.getElementById("sidebar-box").width;
-		window.top.document.getElementById("sidebar-box").width = document.getElementById("container").clientWidth;
+		window.top.document.getElementById("sidebar-box").width = document.getElementById("container").scrollWidth;
 	},
 	
 	onUnload: function()
@@ -61,5 +61,15 @@ var sidebar = {
 				}
 			}
 		}
+	},
+	
+	setWidth: function(event)
+	{	
+		if(event.type == "overflow")
+		{
+			window.top.document.getElementById("sidebar-box").width = document.getElementById("container").scrollWidth + 15;
+		}
+		else if(event.type == "underflow")
+			window.top.document.getElementById("sidebar-box").width = document.getElementById("container").scrollWidth - 15;
 	}
 };

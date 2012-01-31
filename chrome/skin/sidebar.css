@@ -6,3 +6,9 @@ button
 	font-size: 1.3em;
 	padding: 0px;
 }
+
+vbox
+{
+	overflow-y: auto;
+	overflow-x: hidden;
+}

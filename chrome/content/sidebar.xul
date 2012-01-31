@@ -15,7 +15,7 @@
 	<stringbundleset>
 		<stringbundle id="stringbundle" src="chrome://easymath/locale/greek.properties" />
 	</stringbundleset>
-	<vbox id="container">
+	<vbox id="container" flex="1" onoverflow="sidebar.setWidth(event)" onunderflow="sidebar.setWidth(event)">
 		<groupbox id="groupCommon" hidden="true">
 			<caption label="&easymathGroup.common;"/>
 			<hbox>
