@@ -22,8 +22,16 @@
 					 autoCheck="false"
 					 type="checkbox"
 					 group="sidebar"
-					 sidebartitle="&easymathSidebar.label;"
+					 sidebartitle="&easymath.sidebar.label;"
 					 oncommand="toggleSidebar('viewSidebar')" />
 	</broadcasterset>
 
+	<toolbarpalette id="BrowserToolbarPalette">
+		<toolbarbutton id="easyMath-toolbar-button" class="toolbarbutton-1"
+			label="&easymath.toolbarbutton.label;" tooltiptext="&easymath.toolbarbutton.tooltip;"
+			
+			observes="viewSidebar" />
+	</toolbarpalette>
+
+	
 </overlay>

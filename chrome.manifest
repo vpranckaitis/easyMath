@@ -3,5 +3,5 @@ skin      easymath   classic/1.0   chrome/skin/
 locale    easymath   en-US         chrome/locale/en-US/
 
 
-
+style 	  chrome://global/content/customizeToolbar.xul  chrome://easymath/skin/overlay.css
 overlay   chrome://browser/content/browser.xul   chrome://easymath/content/overlay.xul

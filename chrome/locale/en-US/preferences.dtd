@@ -1,4 +1,4 @@
-<!ENTITY easymathPrefs.title  "easyMath Preferences">
-<!ENTITY easymathPrefs.hide  "Hide groups">
-<!ENTITY easymathPrefs.paneDisplay  "Display">
-<!ENTITY easymathPrefs.paneGreek  "Greek">
+<!ENTITY easymath.preferences.title  "easyMath Preferences">
+<!ENTITY easymath.preferences.hide  "Hide groups">
+<!ENTITY easymath.preferences.paneDisplay  "Display">
+<!ENTITY easymath.preferences.paneGreek  "Greek">

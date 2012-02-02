@@ -12,9 +12,9 @@
 	%greekDTD;
 ]>
 
-<prefwindow title="&easymathPrefs.title;" onload="preferences.onLoad()"
+<prefwindow title="&easymath.preferences.title;" onload="preferences.onLoad()"
             xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-	<prefpane id="display" label="&easymathPrefs.paneDisplay;" flex="1">
+	<prefpane id="display" label="&easymath.preferences.paneDisplay;" flex="1">
 		<preferences>
 		  <preference id="hideCommon" name="extensions.easymath.hideCommon" type="bool"/>
 		  <preference id="hideComparison" name="extensions.easymath.hideComparison" type="bool"/>
@@ -25,141 +25,141 @@
 		</preferences>
 		 
 		<groupbox>
-			<caption label="&easymathPrefs.hide;" />
+			<caption label="&easymath.preferences.hide;" />
 			<hbox>
-				<checkbox preference="hideCommon" label="&easymathGroup.common;"/>
-				<checkbox preference="hideComparison" label="&easymathGroup.comparison;"/>
-				<checkbox preference="hideFractions" label="&easymathGroup.fractions;"/>
+				<checkbox preference="hideCommon" label="&easymath.group.common;"/>
+				<checkbox preference="hideComparison" label="&easymath.group.comparison;"/>
+				<checkbox preference="hideFractions" label="&easymath.group.fractions;"/>
 			</hbox>
 			<hbox>
-				<checkbox preference="hideSuperscript" label="&easymathGroup.superscript;"/>
-				<checkbox preference="hideOther" label="&easymathGroup.other;"/>
-				<checkbox preference="hideGreek" label="&easymathGroup.greek;"/>
+				<checkbox preference="hideSuperscript" label="&easymath.group.superscript;"/>
+				<checkbox preference="hideOther" label="&easymath.group.other;"/>
+				<checkbox preference="hideGreek" label="&easymath.group.greek;"/>
 			</hbox>
 		</groupbox>
 	</prefpane>
-	<prefpane id="greek" label="&easymathPrefs.paneGreek;" flex="1">
+	<prefpane id="greek" label="&easymath.preferences.paneGreek;" flex="1">
 		<preferences>
 			<preference id="greekPref" name="extensions.easymath.greek" type="string" />
 		</preferences>
 		<richlistbox id="greekLetterBox" preference="greekPref" onsyncfrompreference="return false" onsynctopreference="return preferences.setGreek(this)">
 			<richlistitem>
-				<label value="&easymathGreek.alpha;" />
+				<label value="&easymath.greek.alpha;" />
 				<checkbox label="Α" />
 				<checkbox label="α" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.beta;" />
+				<label value="&easymath.greek.beta;" />
 				<checkbox label="Β" />
 				<checkbox label="β" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.gamma;" />
+				<label value="&easymath.greek.gamma;" />
 				<checkbox label="Γ" />
 				<checkbox label="γ" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.delta;" />
+				<label value="&easymath.greek.delta;" />
 				<checkbox label="Δ" />
 				<checkbox label="δ" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.epsilon;" />
+				<label value="&easymath.greek.epsilon;" />
 				<checkbox label="Ε" />
 				<checkbox label="ε" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.zeta;" />
+				<label value="&easymath.greek.zeta;" />
 				<checkbox label="Ζ" />
 				<checkbox label="ζ" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.eta;" />
+				<label value="&easymath.greek.eta;" />
 				<checkbox label="Η" />
 				<checkbox label="η" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.theta;" />
+				<label value="&easymath.greek.theta;" />
 				<checkbox label="Θ" />
 				<checkbox label="θ" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.iota;" />
+				<label value="&easymath.greek.iota;" />
 				<checkbox label="Ι" />
 				<checkbox label="ι" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.kappa;" />
+				<label value="&easymath.greek.kappa;" />
 				<checkbox label="Κ" />
 				<checkbox label="κ" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.lambda;" />
+				<label value="&easymath.greek.lambda;" />
 				<checkbox label="Λ" />
 				<checkbox label="λ" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.mu;" />
+				<label value="&easymath.greek.mu;" />
 				<checkbox label="Μ" />
 				<checkbox label="μ" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.nu;" />
+				<label value="&easymath.greek.nu;" />
 				<checkbox label="Ν" />
 				<checkbox label="ν" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.xi;" />
+				<label value="&easymath.greek.xi;" />
 				<checkbox label="Ξ" />
 				<checkbox label="ξ" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.omicron;" />
+				<label value="&easymath.greek.omicron;" />
 				<checkbox label="Ο" />
 				<checkbox label="ο" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.pi;" />
+				<label value="&easymath.greek.pi;" />
 				<checkbox label="Π" />
 				<checkbox label="π" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.rho;" />
+				<label value="&easymath.greek.rho;" />
 				<checkbox label="Ρ" />
 				<checkbox label="ρ" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.sigma;" />
+				<label value="&easymath.greek.sigma;" />
 				<checkbox label="Σ" />
 				<checkbox label="σ" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.tau;" />
+				<label value="&easymath.greek.tau;" />
 				<checkbox label="Τ" />
 				<checkbox label="τ" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.upsilon;" />
+				<label value="&easymath.greek.upsilon;" />
 				<checkbox label="Υ" />
 				<checkbox label="υ" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.phi;" />
+				<label value="&easymath.greek.phi;" />
 				<checkbox label="Φ" />
 				<checkbox label="φ" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.chi;" />
+				<label value="&easymath.greek.chi;" />
 				<checkbox label="Χ" />
 				<checkbox label="χ" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.psi;" />
+				<label value="&easymath.greek.psi;" />
 				<checkbox label="Ψ" />
 				<checkbox label="ψ" />
 			</richlistitem>
 			<richlistitem>
-				<label value="&easymathGreek.omega;" />
+				<label value="&easymath.greek.omega;" />
 				<checkbox label="Ω" />
 				<checkbox label="ω" />
 			</richlistitem>

@@ -2,16 +2,18 @@ var sidebar = {
 	
 	onLoad: function()
 	{
-		window.top.document.getElementById("sidebar-splitter").hidden = true;
+		
 		this.loadSettings();
 		this.beforeWidth = window.top.document.getElementById("sidebar-box").width;
-		window.top.document.getElementById("sidebar-box").width = document.getElementById("container").scrollWidth;
+		window.top.document.getElementById("sidebar-box").width = 0;
+		window.top.document.getElementById("sidebar-box").width	= document.getElementById("container").scrollWidth + 15;
+		window.top.document.getElementById("sidebar-splitter").hidden = true;
 	},
 	
 	onUnload: function()
 	{
-		window.top.document.getElementById("sidebar-box").width = this.beforeWidth;
 		window.top.document.getElementById("sidebar-splitter").hidden = false;
+		window.top.document.getElementById("sidebar-box").width = this.beforeWidth;
 	},
 	
 	addChar: function(c, root)
@@ -61,15 +63,5 @@ var sidebar = {
 				}
 			}
 		}
-	},
-	
-	setWidth: function(event)
-	{	
-		if(event.type == "overflow")
-		{
-			window.top.document.getElementById("sidebar-box").width = document.getElementById("container").scrollWidth + 15;
-		}
-		else if(event.type == "underflow")
-			window.top.document.getElementById("sidebar-box").width = document.getElementById("container").scrollWidth - 15;
 	}
 };

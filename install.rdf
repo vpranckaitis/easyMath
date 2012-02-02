@@ -4,7 +4,7 @@
     <em:id>easymath@vpranckaitis.com</em:id>
     <em:type>2</em:type>
     <em:name>easyMath</em:name>
-    <em:version>0.5.1</em:version>
+    <em:version>0.5.5</em:version>
     <em:creator>Vilius Pranckaitis</em:creator>
 	<em:optionsURL>chrome://easymath/content/preferences.xul</em:optionsURL>
 	<em:iconURL>chrome://easymath/skin/logo.png</em:iconURL>
