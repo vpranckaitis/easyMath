@@ -12,3 +12,8 @@ vbox
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
+
+#html-bb radio
+{
+	display: inline-block;
+}

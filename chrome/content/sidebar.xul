@@ -84,6 +84,20 @@
 		<groupbox id="groupGreek" hidden="true">
 			<caption label="&easymath.group.greek;"/>
 		</groupbox>
+		<groupbox id="groupSpecific" hidden="true">
+			<caption label="&easymath.group.specific;"/>
+			<radiogroup id="html-bb">
+				<hbox>
+					<radio label="HTML" selected="true" />
+					<radio label="BBcode" />
+				</hbox>
+				<hbox>
+					<button label="Frac" tooltiptext="&easymath.sign.product;" oncommand="sidebar.addChar('[sup][/sup]∕[sub][/sub]', true, -18)"/>
+					<button label="Sup" tooltiptext="&easymath.sign.product;" oncommand="sidebar.addChar('[sup][/sup]', true, -6)"/>
+					<button label="Sub" tooltiptext="&easymath.sign.product;" oncommand="sidebar.addChar('[sub][/sub]', true, -6)"/>
+				</hbox>
+			</radiogroup>
+		</groupbox>
 	</vbox>
 </page>
 

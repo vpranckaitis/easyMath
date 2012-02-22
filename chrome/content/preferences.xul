@@ -22,6 +22,7 @@
 		  <preference id="hideSuperscript" name="extensions.easymath.hideSuperscript" type="bool"/>
 		  <preference id="hideOther" name="extensions.easymath.hideOther" type="bool"/>
 		  <preference id="hideGreek" name="extensions.easymath.hideGreek" type="bool"/>
+		  <preference id="hideSpecific" name="extensions.easymath.hideSpecific" type="bool"/>
 		</preferences>
 		 
 		<groupbox>
@@ -35,6 +36,9 @@
 				<checkbox preference="hideSuperscript" label="&easymath.group.superscript;"/>
 				<checkbox preference="hideOther" label="&easymath.group.other;"/>
 				<checkbox preference="hideGreek" label="&easymath.group.greek;"/>
+			</hbox>
+			<hbox>
+				<checkbox preference="hideSpecific" label="&easymath.group.specific;"/>
 			</hbox>
 		</groupbox>
 	</prefpane>

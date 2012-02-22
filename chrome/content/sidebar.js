@@ -16,22 +16,30 @@ var sidebar = {
 		window.top.document.getElementById("sidebar-box").width = this.beforeWidth;
 	},
 	
-	addChar: function(c, root)
+	addChar: function(c, code, offset)
 	{
 		var element = content.document.activeElement;
 		if(((element.tagName == "INPUT") && (element.type == "text")) || (element.tagName == "TEXTAREA"))
 		{
 			var text = element.value;
 			var start = element.selectionStart, end = element.selectionEnd;
+			
+			//if HTML or BBcode
+			if(code && document.getElementById("html-bb").selectedIndex == 0)
+			{
+				c = c.replace(/\[/g, '<').replace(/\]/g, '>');
+			}
+			
 			element.value = text.slice(0, start) + c + text.slice(end);
 			element.focus();
-			element.selectionStart = element.selectionEnd = start + c.length;
+			element.selectionStart = element.selectionEnd = start + c.length + (offset ? offset : 0);
+			
 		}
 	},
 	
 	loadSettings: function()
 	{ 
-		var strings = new Array("Common", "Comparison", "Fractions", "Superscript", "Other", "Greek");
+		var strings = new Array("Common", "Comparison", "Fractions", "Superscript", "Other", "Greek", "Specific");
 		for(i = 0; i < strings.length; i++)
 			document.getElementById("group" + strings[i]).hidden = Application.prefs.get("extensions.easymath.hide" + strings[i]).value;
 		

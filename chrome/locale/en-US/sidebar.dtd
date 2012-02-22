@@ -4,6 +4,7 @@
 <!ENTITY easymath.group.superscript  "Superscript">
 <!ENTITY easymath.group.other "Other">
 <!ENTITY easymath.group.greek  "Greek letters">
+<!ENTITY easymath.group.specific  "Specific">
 
 <!ENTITY easymath.sign.plus  "Plus Sign">
 <!ENTITY easymath.sign.minus  "Minus Sign">

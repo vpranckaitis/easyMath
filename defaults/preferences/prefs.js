@@ -4,5 +4,6 @@ pref("extensions.easymath.hideFractions", false);
 pref("extensions.easymath.hideSuperscript", false);
 pref("extensions.easymath.hideOther", false);
 pref("extensions.easymath.hideGreek", false);
+pref("extensions.easymath.hideSpecific", false);
 //                                 ΑαΒβΓγΔδΕεΖζΗηΘθΙιΚκΛλΜμΝνΞξΟοΠπΡρΣσΤτΥυΦφΧχΨψΩω
-pref("extensions.easymath.greek", "000000000000000000000000000000000000000000000000");
+pref("extensions.easymath.greek", "000000000000000000000000000000010000000000000010");
