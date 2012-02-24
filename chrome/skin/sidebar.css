@@ -7,7 +7,7 @@ button
 	padding: 0px;
 }
 
-vbox
+#container
 {
 	overflow-y: scroll;
 	overflow-x: hidden;
@@ -16,4 +16,9 @@ vbox
 #html-bb radio
 {
 	display: inline-block;
+}
+
+groupbox
+{
+	background-color: red;
 }

@@ -1,7 +1,10 @@
+<!ENTITY easymath.action.collapse  "On click: collapse group">
+
 <!ENTITY easymath.group.common  "Common">
 <!ENTITY easymath.group.comparison  "Comparison">
 <!ENTITY easymath.group.fractions  "Fractions">
 <!ENTITY easymath.group.superscript  "Superscript">
+<!ENTITY easymath.group.arrows "Arrows">
 <!ENTITY easymath.group.other "Other">
 <!ENTITY easymath.group.greek  "Greek letters">
 <!ENTITY easymath.group.specific  "Specific">
@@ -52,5 +55,21 @@
 <!ENTITY easymath.sign.sqrt "Square Root">
 <!ENTITY easymath.sign.increment "Increment">
 <!ENTITY easymath.sign.infinity "Infinity">
+<!ENTITY easymath.sign.degree "Degree Sign">
+<!ENTITY easymath.sign.overline "Combining Overline">
+<!ENTITY easymath.sign.intersection "Intersection">
 
-<!ENTITY easymath.sign. "">
+<!ENTITY easymath.sign.arrowup "Upwards Arrow">
+<!ENTITY easymath.sign.arrowdown "Downwards Arrow">
+<!ENTITY easymath.sign.arrowleft "Leftwards Arrow">
+<!ENTITY easymath.sign.arrowright "Rightwards Arrow">
+<!ENTITY easymath.sign.arrowleftright "Left Right Arrow">
+<!ENTITY easymath.sign.arrowupdown "Up Down Arrow">
+<!ENTITY easymath.sign.arrowupdownbase "Up Down Arrow">
+
+<!ENTITY easymath.specific.fraction "Custom Fraction">
+<!ENTITY easymath.specific.superscript "Custom Superscript">
+<!ENTITY easymath.specific.subscript "Custom subscript">
+<!ENTITY easymath.specific.scientific "Scientific notation">
+
+<!ENTITY easymath.specific. "">

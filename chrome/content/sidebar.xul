@@ -16,89 +16,123 @@
 		<stringbundle id="stringbundle" src="chrome://easymath/locale/greek.properties" />
 	</stringbundleset>
 	<vbox id="container" flex="1">
-		<groupbox id="groupCommon" hidden="true" flex="0">
-			<caption label="&easymath.group.common;"/>
-			<hbox>
-				<button label="+" tooltiptext="&easymath.sign.plus;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="−" tooltiptext="&easymath.sign.minus;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="±" tooltiptext="&easymath.sign.plus-minus;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="×" tooltiptext="&easymath.sign.multiplication;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="∙" tooltiptext="&easymath.sign.bullet;" oncommand="sidebar.addChar(this.label, false)"/>
-				<br />
-				<button label="÷" tooltiptext="&easymath.sign.division;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="∕" tooltiptext="&easymath.sign.slash;" oncommand="sidebar.addChar(this.label, false)"/>
-			</hbox>
-		</groupbox>
-		<groupbox id="groupComparison" hidden="true">
-			<caption label="&easymath.group.comparison;"/>
-			<hbox>
-				<button label="=" tooltiptext="&easymath.sign.equals;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="≠" tooltiptext="&easymath.sign.not-equal;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="≈" tooltiptext="&easymath.sign.almost-equal;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="≡" tooltiptext="&easymath.sign.identical;" oncommand="sidebar.addChar(this.label, false)"/>
-			</hbox>
-			<hbox>
-				<button label="&lt;" tooltiptext="&easymath.sign.less;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="&gt;" tooltiptext="&easymath.sign.greater;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="≤" tooltiptext="&easymath.sign.less-equal;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="≥" tooltiptext="&easymath.sign.greater-equal;" oncommand="sidebar.addChar(this.label, false)"/>
-			</hbox>
-		</groupbox>
-		<groupbox id="groupFractions" hidden="true">
-			<caption label="&easymath.group.fractions;"/>
-			<hbox>
-				<button label="½" tooltiptext="&easymath.sign.one-half;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="⅓" tooltiptext="&easymath.sign.one-third;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="⅔" tooltiptext="&easymath.sign.two-thirds;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="¼" tooltiptext="&easymath.sign.one-quarter;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="¾" tooltiptext="&easymath.sign.three-quarters;" oncommand="sidebar.addChar(this.label, false)"/>
-			</hbox>
-			<hbox>
-				<button label="⅛" tooltiptext="&easymath.sign.one-eighth;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="⅜" tooltiptext="&easymath.sign.three-eighths;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="⅝" tooltiptext="&easymath.sign.five-eighths;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="⅞" tooltiptext="&easymath.sign.seven-eighths;" oncommand="sidebar.addChar(this.label, false)"/>
-			</hbox>
-		</groupbox>
-		<groupbox id="groupSuperscript" hidden="true">
-			<caption label="&easymath.group.superscript;"/>
-			<hbox>
-				<button label="¹" tooltiptext="&easymath.sign.superscript-one;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="²" tooltiptext="&easymath.sign.superscript-two;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="³" tooltiptext="&easymath.sign.superscript-three;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="ⁿ" tooltiptext="&easymath.sign.superscript-n;" oncommand="sidebar.addChar(this.label, false)"/>
-			</hbox>
-		</groupbox>
-		<groupbox id="groupOther" hidden="true">
-			<caption label="&easymath.group.other;"/>
-			<hbox>
-				<button label="∏" tooltiptext="&easymath.sign.product;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="∑" tooltiptext="&easymath.sign.summation;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="∂" tooltiptext="&easymath.sign.partial-differential;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="∫" tooltiptext="&easymath.sign.integral;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="√" tooltiptext="&easymath.sign.sqrt;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="∆" tooltiptext="&easymath.sign.increment;" oncommand="sidebar.addChar(this.label, false)"/>
-				<button label="∞" tooltiptext="&easymath.sign.infinity;" oncommand="sidebar.addChar(this.label, false)"/>
-			</hbox>
-		</groupbox>
-		<groupbox id="groupGreek" hidden="true">
-			<caption label="&easymath.group.greek;"/>
-		</groupbox>
-		<groupbox id="groupSpecific" hidden="true">
-			<caption label="&easymath.group.specific;"/>
-			<radiogroup id="html-bb">
+		<groupbox id="groupCommon" onclick="sidebar.collapseGroup(event, this);">
+			<caption label="&easymath.group.common;" tooltiptext="&easymath.action.collapse;"/>
+			<vbox hidden="true">
 				<hbox>
-					<radio label="HTML" selected="true" />
-					<radio label="BBcode" />
+					<button label="+" tooltiptext="&easymath.sign.plus;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="−" tooltiptext="&easymath.sign.minus;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="±" tooltiptext="&easymath.sign.plus-minus;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="×" tooltiptext="&easymath.sign.multiplication;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="∙" tooltiptext="&easymath.sign.bullet;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="÷" tooltiptext="&easymath.sign.division;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="∕" tooltiptext="&easymath.sign.slash;" oncommand="sidebar.addChar(event, this.label, false)"/>
+				</hbox>
+			</vbox>
+		</groupbox>
+		<groupbox id="groupComparison" onclick="sidebar.collapseGroup(event, this);">
+			<caption label="&easymath.group.comparison;" tooltiptext="&easymath.action.collapse;"/>
+			<vbox hidden="true">
+				<hbox>
+					<button label="=" tooltiptext="&easymath.sign.equals;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="≠" tooltiptext="&easymath.sign.not-equal;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="≈" tooltiptext="&easymath.sign.almost-equal;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="≡" tooltiptext="&easymath.sign.identical;" oncommand="sidebar.addChar(event, this.label, false)"/>
 				</hbox>
 				<hbox>
-					<button label="Frac" tooltiptext="&easymath.sign.product;" oncommand="sidebar.addChar('[sup][/sup]∕[sub][/sub]', true, -18)"/>
-					<button label="Sup" tooltiptext="&easymath.sign.product;" oncommand="sidebar.addChar('[sup][/sup]', true, -6)"/>
-					<button label="Sub" tooltiptext="&easymath.sign.product;" oncommand="sidebar.addChar('[sub][/sub]', true, -6)"/>
+					<button label="&lt;" tooltiptext="&easymath.sign.less;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="&gt;" tooltiptext="&easymath.sign.greater;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="≤" tooltiptext="&easymath.sign.less-equal;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="≥" tooltiptext="&easymath.sign.greater-equal;" oncommand="sidebar.addChar(event, this.label, false)"/>
 				</hbox>
-			</radiogroup>
+			</vbox>
+		</groupbox>
+		<groupbox id="groupFractions" onclick="sidebar.collapseGroup(event, this);">
+			<caption label="&easymath.group.fractions;" tooltiptext="&easymath.action.collapse;"/>
+			<vbox hidden="true">
+				<hbox>
+					<button label="½" tooltiptext="&easymath.sign.one-half;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="⅓" tooltiptext="&easymath.sign.one-third;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="⅔" tooltiptext="&easymath.sign.two-thirds;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="¼" tooltiptext="&easymath.sign.one-quarter;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="¾" tooltiptext="&easymath.sign.three-quarters;" oncommand="sidebar.addChar(event, this.label, false)"/>
+				</hbox>
+				<hbox>
+					<button label="⅛" tooltiptext="&easymath.sign.one-eighth;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="⅜" tooltiptext="&easymath.sign.three-eighths;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="⅝" tooltiptext="&easymath.sign.five-eighths;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="⅞" tooltiptext="&easymath.sign.seven-eighths;" oncommand="sidebar.addChar(event, this.label, false)"/>
+				</hbox>
+			</vbox>
+		</groupbox>
+		<groupbox id="groupSuperscript" onclick="sidebar.collapseGroup(event, this);">
+			<caption label="&easymath.group.superscript;" tooltiptext="&easymath.action.collapse;"/>
+			<vbox hidden="true">
+				<hbox>
+					<button label="¹" tooltiptext="&easymath.sign.superscript-one;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="²" tooltiptext="&easymath.sign.superscript-two;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="³" tooltiptext="&easymath.sign.superscript-three;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="ⁿ" tooltiptext="&easymath.sign.superscript-n;" oncommand="sidebar.addChar(event, this.label, false)"/>
+				</hbox>
+			</vbox>
+		</groupbox>
+		<groupbox id="groupArrows" onclick="sidebar.collapseGroup(event, this);">
+			<caption label="&easymath.group.arrows;" tooltiptext="&easymath.action.collapse;"/>
+			<vbox hidden="true">
+				<hbox>
+					<button label="↑" tooltiptext="&easymath.sign.arrowup;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="↓" tooltiptext="&easymath.sign.arrowdown;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="←" tooltiptext="&easymath.sign.arrowleft;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="→" tooltiptext="&easymath.sign.arrowright;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="↔" tooltiptext="&easymath.sign.arrowleftright;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="↕" tooltiptext="&easymath.sign.arrowupdown;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="↨" tooltiptext="&easymath.sign.arrowupdownbase;" oncommand="sidebar.addChar(event, this.label, false)"/>
+				</hbox>
+			</vbox>
+		</groupbox>
+		<groupbox id="groupOther" onclick="sidebar.collapseGroup(event, this);">
+			<caption label="&easymath.group.other;" tooltiptext="&easymath.action.collapse;"/>
+			<vbox hidden="true">
+				<hbox>
+					<button label="∏" tooltiptext="&easymath.sign.product;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="∑" tooltiptext="&easymath.sign.summation;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="∂" tooltiptext="&easymath.sign.partial-differential;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="∫" tooltiptext="&easymath.sign.integral;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="√" tooltiptext="&easymath.sign.sqrt;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="∆" tooltiptext="&easymath.sign.increment;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="∞" tooltiptext="&easymath.sign.infinity;" oncommand="sidebar.addChar(event, this.label, false)"/>
+				</hbox>
+				<hbox>
+					<button label="°" tooltiptext="&easymath.sign.degree;" oncommand="sidebar.addChar(event, this.label, false)"/>
+					<button label="‾" tooltiptext="&easymath.sign.overline;" oncommand="sidebar.addChar(event, '̅', false)"/>
+					<button label="∩" tooltiptext="&easymath.sign.intersection;" oncommand="sidebar.addChar(event, this.label, false)"/>
+				</hbox>
+			</vbox>
+		</groupbox>
+		<groupbox id="groupGreek" onclick="sidebar.collapseGroup(event, this);">
+			<caption label="&easymath.group.greek;" tooltiptext="&easymath.action.collapse;"/>
+			<vbox hidden="true">
+			
+			</vbox>
+		</groupbox>
+		<groupbox id="groupSpecific" onclick="sidebar.collapseGroup(event, this);">
+			<caption label="&easymath.group.specific;" tooltiptext="&easymath.action.collapse;"/>
+			<vbox hidden="true">
+				<radiogroup id="html-bb">
+					<hbox>
+						<radio label="HTML" selected="true" />
+						<radio label="BBcode" />
+					</hbox>
+				</radiogroup>
+				<hbox>
+					<button label="Frac" tooltiptext="&easymath.specific.fraction;" oncommand="sidebar.addChar(event, '[sup][/sup]∕[sub][/sub]', true, -18)"/>
+					<button label="Sup" tooltiptext="&easymath.specific.superscript;" oncommand="sidebar.addChar(event, '[sup][/sup]', true, -6)"/>
+					<button label="Sub" tooltiptext="&easymath.specific.subscript;" oncommand="sidebar.addChar(event, '[sub][/sub]', true, -6)"/>
+					<button label="Sci" tooltiptext="&easymath.specific.scientific;" oncommand="sidebar.addChar(event, '∙10[sup][/sup]', true, -6)"/>
+				</hbox>
+			</vbox>
 		</groupbox>
 	</vbox>
 </page>
 
-<!-- <button label="" tooltiptext="&easymath.sign.;" oncommand="sidebar.addChar(this.label, false)"/> -->
+<!-- <button label="" tooltiptext="&easymath.sign.;" oncommand="sidebar.addChar(event, this.label, false)"/> -->

@@ -16,7 +16,7 @@ var sidebar = {
 		window.top.document.getElementById("sidebar-box").width = this.beforeWidth;
 	},
 	
-	addChar: function(c, code, offset)
+	addChar: function(e, c, code, offset)
 	{
 		var element = content.document.activeElement;
 		if(((element.tagName == "INPUT") && (element.type == "text")) || (element.tagName == "TEXTAREA"))
@@ -35,13 +35,14 @@ var sidebar = {
 			element.selectionStart = element.selectionEnd = start + c.length + (offset ? offset : 0);
 			
 		}
+		e.stopPropagation();
 	},
 	
 	loadSettings: function()
 	{ 
-		var strings = new Array("Common", "Comparison", "Fractions", "Superscript", "Other", "Greek", "Specific");
+		var strings = new Array("Common", "Comparison", "Fractions", "Superscript", "Arrows", "Other", "Greek", "Specific");
 		for(i = 0; i < strings.length; i++)
-			document.getElementById("group" + strings[i]).hidden = Application.prefs.get("extensions.easymath.hide" + strings[i]).value;
+			document.getElementById("group" + strings[i]).getElementsByTagName("vbox")[0].hidden = Application.prefs.get("extensions.easymath.hide" + strings[i]).value;
 		
 		if(!document.getElementById("groupGreek").hidden)
 		{	
@@ -52,7 +53,8 @@ var sidebar = {
 										 "upsilon", "phi", "chi", "psi", "omega");
 			var stringbundle = document.getElementById("stringbundle");
 			var hbox = document.createElement("hbox");
-			document.getElementById("groupGreek").appendChild(hbox);
+			var container = document.getElementById("groupGreek").getElementsByTagName("vbox")[0];
+			container.appendChild(hbox);
 			
 			for(i = 0; i < greek.length; i++)
 			{
@@ -62,14 +64,23 @@ var sidebar = {
 					hbox.appendChild(button);
 					button.setAttribute("label", letters[i]);
 					button.setAttribute("tooltiptext", stringbundle.getString(lettersNames[(i - i%2)/2]));
-					button.addEventListener("command", function(event){sidebar.addChar(event.target.label, false)});
+					button.addEventListener("click", function(event){sidebar.addChar(events, event.target.label, false)});
 					if(hbox.childNodes.length == 7)
 					{
 						hbox = document.createElement("hbox");
-						document.getElementById("groupGreek").appendChild(hbox);
+						container.appendChild(hbox);
 					}
 				}
 			}
+		}
+	},
+	
+	collapseGroup: function(e, element)
+	{
+		if(e.target == element || e.target.tagName == "caption")
+		{
+			var vbox = element.getElementsByTagName("vbox")[0];
+			vbox.hidden = !vbox.hidden;
 		}
 	}
 };
