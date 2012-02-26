@@ -5,6 +5,7 @@ var preferences =
 		this.getGreek();
 	},
 	
+	//loads Greek letters preferences
 	getGreek: function()
 	{
 		var checkboxes = document.getElementById("greekLetterBox").getElementsByTagName("checkbox");
@@ -15,6 +16,7 @@ var preferences =
 		}
 	},
 	
+	//saves Greek letters preferences
 	setGreek: function(richlistbox)
 	{
 		var letters = "";
