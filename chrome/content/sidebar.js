@@ -23,6 +23,7 @@ var sidebar = {
 		{
 			var text = element.value;
 			var start = element.selectionStart, end = element.selectionEnd;
+			var scrolltop = element.scrollTop;
 			
 			//if HTML or BBcode
 			if(code && document.getElementById("html-bb").selectedIndex == 0)
@@ -33,7 +34,8 @@ var sidebar = {
 			element.value = text.slice(0, start) + c + text.slice(end);
 			element.focus();
 			element.selectionStart = element.selectionEnd = start + c.length + (offset ? offset : 0);
-			
+			if(scrolltop)
+				element.scrollTop = scrolltop;
 		}
 		e.stopPropagation();
 	},
