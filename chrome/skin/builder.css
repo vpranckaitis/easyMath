@@ -1,0 +1,48 @@
+window
+{
+	width: 500px;
+}
+.overflow
+{
+	height: 150px;
+	overflow-y: auto;
+	border: 1px solid lightgray;
+	padding: 0.2em;
+}
+menulist, .overflow
+{
+	margin: 0.1em 0.5em;
+}
+
+#symbol-list>label, #user-symbols>label, #hide-it>label, #special-symbols>label
+{
+	display: inline-block;
+	border: 1px solid gray;
+	font-size: 1.5em;
+	padding-top: 0.25em;
+	width: 2em;
+	height: 2em;
+	margin: 1px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#user-symbols>#dragged-node
+{
+	display: none !important;
+}
+
+#vbox-non-symbol
+{
+	height: auto;
+	max-height: 100px;
+}
+label[data-code="-1"]
+{
+	color: red; 
+}
+
+label.insert
+{
+	border-style: dashed !important;
+}

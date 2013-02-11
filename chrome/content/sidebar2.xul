@@ -4,14 +4,19 @@
 <?xml-stylesheet href="chrome://easymath/skin/sidebar.css" type="text/css" ?>
 
 
-<page id="easymath-sidebar" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" onload="easymath.loadSymbols()">
+<page id="easymath-sidebar" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" onload="sidebar.onLoad();">
 	<script src="chrome://easymath/content/sidebar.js" type="text/javascript" />
-	<stringbundleset>
-		<stringbundle id="nameStrings" src="chrome://easymath/locale/name.properties" />
-	</stringbundleset>
-	<vbox id="container"  flex="1">
-		<description id="symbols" >
-		</description>
+	<vbox id="container" datasources="profile:easymath.sqlite" ref="*" querytype="storage" flex="1">
+		<template>
+			<query>
+				SELECT code FROM usersymbols;
+			</query>
+				<action>
+					<groupbox uri="?" data-group="?_id" onclick="sidebar.onUnload()">
+						<caption label="?code"/>
+					</groupbox>
+				</action>
+		</template>
 	</vbox>
 </page>
 

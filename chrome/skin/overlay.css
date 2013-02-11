@@ -1,12 +1,9 @@
 #easyMath-toolbar-button
 {
-	//padding: 2px 2px;
 	list-style-image: url(chrome://easymath/skin/toolbarbutton.png);
-	//-moz-box-orient: vertical;
 }
 
 toolbar[iconsize="small"] #easyMath-toolbar-button
 {
 	list-style-image: url(chrome://easymath/skin/toolbarbutton-small.png);
-	//-moz-box-orient: vertical;
 }

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css" ?>
+<?xml-stylesheet href="chrome://browser/skin/browser.css" type="text/css" ?>
+<?xml-stylesheet href="chrome://easymath/skin/builder.css" type="text/css" ?>
+
+<!DOCTYPE window [
+	<!ENTITY % sidebarDTD SYSTEM "chrome://easymath/locale/builder.dtd">
+	%sidebarDTD;
+	<!ENTITY % greekDTD SYSTEM "chrome://easymath/locale/greek.dtd">
+	%greekDTD;
+]>
+
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" onload="easymath.loadUserSymbols()">
+	<script src="builder.js" type="text/javascript"/>
+	
+	<stringbundleset>
+		<stringbundle id="nameStrings" src="chrome://easymath/locale/name.properties" />
+		<stringbundle id="builderStrings" src="chrome://easymath/locale/builder.properties" />
+	</stringbundleset>
+	<groupbox>
+		<caption label="&easymath.ui.groupsymbols;" />
+		<menulist id="category-list" crop="end" value="0" oncommand="easymath.updateList(event.target);" onload="easymath.updateList(this);" >
+			<menupopup>
+				<menuitem label="&easymath.category.latin;" value="0" />
+				<menuitem label="&easymath.category.latinext;" value="1" />
+				<menuitem label="&easymath.category.spacing;" value="2" />
+				<menuitem label="&easymath.category.diacrit;" value="3" />
+				<menuitem label="&easymath.category.cyrillic;" value="4" />
+				<menuitem label="&easymath.category.punctuation;" value="5" />
+				<menuitem label="&easymath.category.letterarrow;" value="6" />
+				<menuitem label="&easymath.category.operators;" value="7" />
+				<menuitem label="&easymath.category.technical;" value="8" />
+				<menuitem label="&easymath.category.control;" value="9" />
+				<menuitem label="&easymath.category.box;" value="10" />
+				<menuitem label="&easymath.category.miscellaneous;" value="11"/>
+				<menuitem label="&easymath.category.dingbats;" value="12"/>
+				<menuitem label="&easymath.category.suparrows;" value="13" />
+				<menuitem label="&easymath.category.supmath;" value="14" />
+				<menuitem label="&easymath.category.cjk;" value="15" />
+				<menuitem label="&easymath.category.presentation;" value="16" />
+				<menuitem label="&easymath.category.halfmarks;" value="17" />
+				<menuitem label="&easymath.category.slatin;" value="18" />
+				<menuitem label="&easymath.category.slatin2;" value="29" />
+				<menuitem label="&easymath.category.slatin3;" value="20" />
+				<menuitem label="&easymath.category.sgreek;" value="21" />
+			</menupopup>
+		</menulist>
+		
+		<vbox class="overflow" data-symbol="throw-out" ondragover="return false;" ondrop="easymath.onDrop(event)">
+			<description id="symbol-list">
+				
+			</description>
+		</vbox>
+	</groupbox>
+	<groupbox>
+		<caption label="&easymath.ui.groupnonsymbol;" />
+		<vbox id="vbox-non-symbol" class="overflow" data-symbol="throw-out"  ondragover="return false;" ondrop="easymath.onDrop(event)">
+			<description id="special-symbols">
+				
+			</description>
+		</vbox>
+	</groupbox>
+	<groupbox>
+		<caption label="&easymath.ui.groupuser;" />
+		<vbox id="vbox-user" class="overflow" ondragover="easymath.dragScroll(event)">
+			<description id="user-symbols">
+				
+			</description>
+		</vbox>
+	</groupbox>
+	<hbox>
+		<button label="&easymath.ui.buttonsave;" onclick="easymath.saveBuild(); window.close();" />
+		<button label="&easymath.ui.buttoncancel;" onclick="window.close()" />
+	</hbox>
+	<hbox id="hide-it" visible="false">
+	</hbox>
+</window>

@@ -1,10 +1,11 @@
 button
 {
-	min-width: 30px;
-	min-height: 30px;
+	min-width: 2em;
+	min-height: 1.3em;
 	margin: 0px;
 	font-size: 1.3em;
 	padding: 0px;
+	display: inline-block;
 }
 
 #container
@@ -18,7 +19,13 @@ button
 	display: inline-block;
 }
 
+br
+{
+	display: block;
+	height: 0.5em;
+}
+
 groupbox
 {
-	background-color: red;
+	
 }
