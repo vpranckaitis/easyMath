@@ -1,25 +1,47 @@
 <!ENTITY easymath.category.latin  "Controls and Basic Latin, and Latin-1 Supplement">
+<!ENTITY easymath.category.latinRange  "00000 - 000FF">
 <!ENTITY easymath.category.latinext  "Latin Extended-A, Latin Extended-B">
+<!ENTITY easymath.category.latinextRange  "00100 - 001FF">
 <!ENTITY easymath.category.spacing  "IPA Extensions, Spacing Modifier Letters">
+<!ENTITY easymath.category.spacingRange  "00200 - 002FF">
 <!ENTITY easymath.category.diacrit  "Combining Diacritical Marks, Greek [and Coptic]">
+<!ENTITY easymath.category.diacritRange  "00300 - 003FF">
 <!ENTITY easymath.category.cyrillic  "Cyrillic">
-<!ENTITY easymath.category.punctuation  "General Punctuation, Superscripts and Subscripts, Currency Symbols, Combining Diacritical Marks for Symbols ">
+<!ENTITY easymath.category.cyrillicRange  "00400 - 004FF">
+<!ENTITY easymath.category.punctuation  "General Punctuation, Superscripts and Subscripts, Currency Symbols, Combining Diacritical Marks for Symbols">
+<!ENTITY easymath.category.punctuationRange  "02000 - 020FF">
 <!ENTITY easymath.category.letterarrow  "Letter-like Symbols, Number Forms, Arrows">
+<!ENTITY easymath.category.letterarrowRange  "02100 - 021FF">
 <!ENTITY easymath.category.operators  "Mathematical Operators">
+<!ENTITY easymath.category.operatorsRange  "02200 - 022FF">
 <!ENTITY easymath.category.technical  "Miscellaneous Technical">
+<!ENTITY easymath.category.technicalRange  "02300 - 023FF">
 <!ENTITY easymath.category.control  "Control Pictures, Optical Character Recognition, Enclosed Alphanumerics">
+<!ENTITY easymath.category.controlRange  "02400 - 024FF">
 <!ENTITY easymath.category.box  "Box Drawing, Block Elements, Geometric Shapes">
-<!ENTITY easymath.category.miscellaneous  "Miscellaneous Symbols ">
+<!ENTITY easymath.category.boxRange  "02500 - 025FF">
+<!ENTITY easymath.category.miscellaneous  "Miscellaneous Symbols">
+<!ENTITY easymath.category.miscellaneousRange  "02600 - 026FF">
 <!ENTITY easymath.category.dingbats  "Dingbats">
+<!ENTITY easymath.category.dingbatsRange  "02700 - 027FF">
 <!ENTITY easymath.category.suparrows  "Supplemental Arrows, Miscellaneous Mathematical Symbols">
+<!ENTITY easymath.category.suparrowsRange  "02900 - 029FF">
 <!ENTITY easymath.category.supmath  "Supplemental Mathematical Operators">
+<!ENTITY easymath.category.supmathRange  "02A00 - 02AFF">
 <!ENTITY easymath.category.cjk  "CJK Symbols and Punctuation, [Hiragana, Katakana]">
-<!ENTITY easymath.category.presentation  "Alphabetic Presentation Forms ">
-<!ENTITY easymath.category.halfmarks  "[Combining Half Marks, CJK Compatibility Forms, Small Form Variants, Arabic Presentation Forms-B] ">
-<!ENTITY easymath.category.slatin  "Mathematical Styled Latin (Bold, Italic, Bold Italic, Script, Bold Script begins) ">
-<!ENTITY easymath.category.slatin2  "Mathematical Styled Latin (Bold Script ends, Fraktur, Double-struck, Bold Fraktur, Sans-serif, Sans-serif Bold begins) ">
-<!ENTITY easymath.category.slatin3  "Mathematical Styled Latin (Sans-serif Bold ends, Sans-serif Italic, Sans-serif Bold Italic, Monospace, Bold), Mathematical Styled Greek (Bold, Italic begins) ">
-<!ENTITY easymath.category.sgreek  "Mathematical Styled Greek (Italic continued, Bold Italic, Sans-serif Bold), Mathematical Styled Digits ">
+<!ENTITY easymath.category.cjkRange  "03000 - 030FF">
+<!ENTITY easymath.category.presentation  "Alphabetic Presentation Forms">
+<!ENTITY easymath.category.presentationRange  "0FB00 - 0FBFF">
+<!ENTITY easymath.category.halfmarks  "[Combining Half Marks, CJK Compatibility Forms, Small Form Variants, Arabic Presentation Forms-B]">
+<!ENTITY easymath.category.halfmarksRange  "0FE00 - 0FEFF">
+<!ENTITY easymath.category.slatin  "Mathematical Styled Latin (Bold, Italic, Bold Italic, Script, Bold Script begins)">
+<!ENTITY easymath.category.slatinRange  "1D400 - 1D4FF">
+<!ENTITY easymath.category.slatin2  "Mathematical Styled Latin (Bold Script ends, Fraktur, Double-struck, Bold Fraktur, Sans-serif, Sans-serif Bold begins)">
+<!ENTITY easymath.category.slatin2Range  "1D500 - 1D5FF">
+<!ENTITY easymath.category.slatin3  "Mathematical Styled Latin (Sans-serif Bold ends, Sans-serif Italic, Sans-serif Bold Italic, Monospace, Bold), Mathematical Styled Greek (Bold, Italic begins)">
+<!ENTITY easymath.category.slatin3Range  "1D600 - 1D6FF">
+<!ENTITY easymath.category.sgreek  "Mathematical Styled Greek (Italic continued, Bold Italic, Sans-serif Bold), Mathematical Styled Digits">
+<!ENTITY easymath.category.sgreekRange  "1D700 - 1D7FF">
 <!ENTITY easymath.ui.groupsymbols  "Symbols">
 <!ENTITY easymath.ui.groupuser  "User symbols">
 <!ENTITY easymath.ui.groupnonsymbol  "Special">

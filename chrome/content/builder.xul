@@ -21,28 +21,28 @@
 		<caption label="&easymath.ui.groupsymbols;" />
 		<menulist id="category-list" crop="end" value="0" oncommand="easymath.updateList(event.target);" onload="easymath.updateList(this);" >
 			<menupopup>
-				<menuitem label="&easymath.category.latin;" value="0" />
-				<menuitem label="&easymath.category.latinext;" value="1" />
-				<menuitem label="&easymath.category.spacing;" value="2" />
-				<menuitem label="&easymath.category.diacrit;" value="3" />
-				<menuitem label="&easymath.category.cyrillic;" value="4" />
-				<menuitem label="&easymath.category.punctuation;" value="5" />
-				<menuitem label="&easymath.category.letterarrow;" value="6" />
-				<menuitem label="&easymath.category.operators;" value="7" />
-				<menuitem label="&easymath.category.technical;" value="8" />
-				<menuitem label="&easymath.category.control;" value="9" />
-				<menuitem label="&easymath.category.box;" value="10" />
-				<menuitem label="&easymath.category.miscellaneous;" value="11"/>
-				<menuitem label="&easymath.category.dingbats;" value="12"/>
-				<menuitem label="&easymath.category.suparrows;" value="13" />
-				<menuitem label="&easymath.category.supmath;" value="14" />
-				<menuitem label="&easymath.category.cjk;" value="15" />
-				<menuitem label="&easymath.category.presentation;" value="16" />
-				<menuitem label="&easymath.category.halfmarks;" value="17" />
-				<menuitem label="&easymath.category.slatin;" value="18" />
-				<menuitem label="&easymath.category.slatin2;" value="29" />
-				<menuitem label="&easymath.category.slatin3;" value="20" />
-				<menuitem label="&easymath.category.sgreek;" value="21" />
+				<menuitem label="&easymath.category.latin;" tooltiptext="&easymath.category.latinRange;" value="0" />
+				<menuitem label="&easymath.category.latinext;" tooltiptext="&easymath.category.latinextRange;" value="1" />
+				<menuitem label="&easymath.category.spacing;" tooltiptext="&easymath.category.spacingRange;" value="2" />
+				<menuitem label="&easymath.category.diacrit;" tooltiptext="&easymath.category.diacritRange;" value="3" />
+				<menuitem label="&easymath.category.cyrillic;" tooltiptext="&easymath.category.cyrillicRange;" value="4" />
+				<menuitem label="&easymath.category.punctuation;" tooltiptext="&easymath.category.punctuationRange;" value="5" />
+				<menuitem label="&easymath.category.letterarrow;" tooltiptext="&easymath.category.letterarrowRange;" value="6" />
+				<menuitem label="&easymath.category.operators;" tooltiptext="&easymath.category.operatorsRange;" value="7" />
+				<menuitem label="&easymath.category.technical;" tooltiptext="&easymath.category.technicalRange;" value="8" />
+				<menuitem label="&easymath.category.control;" tooltiptext="&easymath.category.controlRange;" value="9" hidden="true" />
+				<menuitem label="&easymath.category.box;" tooltiptext="&easymath.category.boxRange;" value="10" hidden="true" />
+				<menuitem label="&easymath.category.miscellaneous;" tooltiptext="&easymath.category.miscellaneousRange;" value="11" hidden="true" />
+				<menuitem label="&easymath.category.dingbats;" tooltiptext="&easymath.category.dingbatsRange;" value="12" hidden="true" />
+				<menuitem label="&easymath.category.suparrows;" tooltiptext="&easymath.category.suparrowsRange;" value="13" hidden="true" />
+				<menuitem label="&easymath.category.supmath;" tooltiptext="&easymath.category.supmathRange;" value="14" hidden="true" />
+				<menuitem label="&easymath.category.cjk;" tooltiptext="&easymath.category.cjkRange;" value="15" hidden="true" />
+				<menuitem label="&easymath.category.presentation;" tooltiptext="&easymath.category.presentationRange;" value="16" hidden="true" />
+				<menuitem label="&easymath.category.halfmarks;" tooltiptext="&easymath.category.halfmarksRange;" value="17" hidden="true" />
+				<menuitem label="&easymath.category.slatin;" tooltiptext="&easymath.category.slatinRange;" value="18" hidden="true" />
+				<menuitem label="&easymath.category.slatin2;" tooltiptext="&easymath.category.slatin2Range;" value="19" hidden="true" />
+				<menuitem label="&easymath.category.slatin3;" tooltiptext="&easymath.category.slatin3Range;" value="20" hidden="true" />
+				<menuitem label="&easymath.category.sgreek;" tooltiptext="&easymath.category.sgreekRange;" value="21" hidden="true" />
 			</menupopup>
 		</menulist>
 		

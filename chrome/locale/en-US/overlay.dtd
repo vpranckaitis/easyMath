@@ -1,7 +1,7 @@
 <!ENTITY easymath.label "easyMath">
 
 <!ENTITY easymath.shortcut-key "M">
-<!ENTITY easymath.shortcut-modifiers "control alt">
+<!ENTITY easymath.shortcut-modifiers "accel alt">
 
 <!ENTITY easymath.sidebar.label "easyMath">
 
