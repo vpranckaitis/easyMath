@@ -1,0 +1,27 @@
+<!ENTITY easymath.category.latin  "Controls and Basic Latin, and Latin-1 Supplement">
+<!ENTITY easymath.category.latinext  "Latin Extended-A, Latin Extended-B">
+<!ENTITY easymath.category.spacing  "IPA Extensions, Spacing Modifier Letters">
+<!ENTITY easymath.category.diacrit  "Combining Diacritical Marks, Greek [and Coptic]">
+<!ENTITY easymath.category.cyrillic  "Cyrillic">
+<!ENTITY easymath.category.punctuation  "General Punctuation, Superscripts and Subscripts, Currency Symbols, Combining Diacritical Marks for Symbols ">
+<!ENTITY easymath.category.letterarrow  "Letter-like Symbols, Number Forms, Arrows">
+<!ENTITY easymath.category.operators  "Mathematical Operators">
+<!ENTITY easymath.category.technical  "Miscellaneous Technical">
+<!ENTITY easymath.category.control  "Control Pictures, Optical Character Recognition, Enclosed Alphanumerics">
+<!ENTITY easymath.category.box  "Box Drawing, Block Elements, Geometric Shapes">
+<!ENTITY easymath.category.miscellaneous  "Miscellaneous Symbols ">
+<!ENTITY easymath.category.dingbats  "Dingbats">
+<!ENTITY easymath.category.suparrows  "Supplemental Arrows, Miscellaneous Mathematical Symbols">
+<!ENTITY easymath.category.supmath  "Supplemental Mathematical Operators">
+<!ENTITY easymath.category.cjk  "CJK Symbols and Punctuation, [Hiragana, Katakana]">
+<!ENTITY easymath.category.presentation  "Alphabetic Presentation Forms ">
+<!ENTITY easymath.category.halfmarks  "[Combining Half Marks, CJK Compatibility Forms, Small Form Variants, Arabic Presentation Forms-B] ">
+<!ENTITY easymath.category.slatin  "Mathematical Styled Latin (Bold, Italic, Bold Italic, Script, Bold Script begins) ">
+<!ENTITY easymath.category.slatin2  "Mathematical Styled Latin (Bold Script ends, Fraktur, Double-struck, Bold Fraktur, Sans-serif, Sans-serif Bold begins) ">
+<!ENTITY easymath.category.slatin3  "Mathematical Styled Latin (Sans-serif Bold ends, Sans-serif Italic, Sans-serif Bold Italic, Monospace, Bold), Mathematical Styled Greek (Bold, Italic begins) ">
+<!ENTITY easymath.category.sgreek  "Mathematical Styled Greek (Italic continued, Bold Italic, Sans-serif Bold), Mathematical Styled Digits ">
+<!ENTITY easymath.ui.groupsymbols  "Symbols">
+<!ENTITY easymath.ui.groupuser  "User symbols">
+<!ENTITY easymath.ui.groupnonsymbol  "Special">
+<!ENTITY easymath.ui.buttonsave  "Save">
+<!ENTITY easymath.ui.buttoncancel  "Cancel">
